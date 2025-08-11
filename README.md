@@ -16,7 +16,7 @@ ToDoList is a simple task management application featuring task creation, editin
 
 ## Requirements
 
-- .NET 6.0 or higher
+- .NET 8.0 
 - Visual Studio 2022 or any compatible IDE
 - SQLite
 
@@ -37,13 +37,13 @@ Please open the solution in Visual Studio and run it. NuGet packages will be ins
 
 ### Project Structure
 
-**Domain** — Entities and domain interfaces
+**Domain** â€” Entities and domain interfaces
 
-**Application** — DTOs, service interfaces, business logic
+**Application** â€” DTOs, service interfaces, business logic
 
-**Infrastructure** — Data access implementations, EF Core migrations, PDF export service
+**Infrastructure** â€” Data access implementations, EF Core migrations, PDF export service
 
-**Presentation** — WPF UI, MVVM ViewModels, Views
+**Presentation** â€” WPF UI, MVVM ViewModels, Views
 
 ### Architecture solutions
 

@@ -26,8 +26,10 @@ ToDoList is a simple task management application featuring task creation, editin
 
 ### 1. Clone the repository
 
+```powershell
 git clone https://github.com/yourusername/ToDoList.git
 cd ToDoList
+```
 
 ### 2. Install NuGet packages
 
@@ -37,22 +39,30 @@ Navigate to the solution folder and run these commands in the terminal, or insta
 
 Go to the Infrastructure project directory (where ToDoDbContext is located):
 
+```powershell
 cd ToDoList.Infrastructure
+```
 
 Create the initial migration (if not created yet):
 
+```powershell
 dotnet ef migrations add InitialCreate --startup-project ../ToDoList.Presentation
+```
 
 Apply the migration to create/update the database:
 
+```powershell
 dotnet ef database update --startup-project ../ToDoList.Presentation
+```
 
 ### 4. Run the application
 
 Return to the solution root and run the Presentation project
 
+```powershell
 cd ../ToDoList.Presentation
 dotnet run
+```powershell
 
 ### Project Structure
 Domain — Entities and domain interfaces

@@ -27,7 +27,7 @@ ToDoList is a simple task management application featuring task creation, editin
 ### 1. Clone the repository
 
 ```powershell
-git clone https://github.com/yourusername/ToDoList.git
+git clone https://github.com/romanwit/ToDoList.git
 cd ToDoList
 ```
 

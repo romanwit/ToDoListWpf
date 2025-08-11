@@ -62,16 +62,16 @@ Return to the solution root and run the Presentation project
 ```powershell
 cd ../ToDoList.Presentation
 dotnet run
-```powershell
+```
 
 ### Project Structure
-Domain — Entities and domain interfaces
+**Domain** — Entities and domain interfaces
 
-Application — DTOs, service interfaces, business logic
+**Application** — DTOs, service interfaces, business logic
 
-Infrastructure — Data access implementations, EF Core migrations, PDF export service
+**Infrastructure** — Data access implementations, EF Core migrations, PDF export service
 
-Presentation — WPF UI, MVVM ViewModels, Views
+**Presentation** — WPF UI, MVVM ViewModels, Views
 
 ### License
 This project is open-source and free to use and modify.

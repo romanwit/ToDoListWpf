@@ -35,6 +35,10 @@ cd ToDoList
 
 Navigate to the solution folder and run these commands in the terminal, or install via Visual Studio NuGet Package Manager:
 
+```powershell
+dotnet restore
+```
+
 ### 3.  Create and apply database migrations
 
 Go to the Infrastructure project directory (where ToDoDbContext is located):

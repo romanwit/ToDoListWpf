@@ -19,7 +19,10 @@ namespace ToDoList.Tests
 
         public MainWindowViewModelTests()
         {
-            var loggerFactory = LoggerFactory.Create(builder => builder.AddConsole());
+            var loggerFactory = LoggerFactory.Create(builder =>
+            {
+                builder.AddConsole();
+            });
             var config = new MapperConfiguration(cfg => cfg.AddProfile<TaskProfile>(), loggerFactory);
             _mapper = config.CreateMapper();
         }

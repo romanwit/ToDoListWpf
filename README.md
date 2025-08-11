@@ -31,42 +31,10 @@ git clone https://github.com/romanwit/ToDoListWpf.git
 cd ToDoListWpf
 ```
 
-### 2. Install NuGet packages
 
-Navigate to the solution folder and run these commands in the terminal, or install via Visual Studio NuGet Package Manager:
+### 2. Run the application
 
-```powershell
-dotnet restore
-```
-
-### 3.  Create and apply database migrations
-
-Go to the Infrastructure project directory (where ToDoDbContext is located):
-
-```powershell
-cd ToDoList.Infrastructure
-```
-
-Create the initial migration (if not created yet):
-
-```powershell
-dotnet ef migrations add InitialCreate --startup-project ../ToDoList.Presentation
-```
-
-Apply the migration to create/update the database:
-
-```powershell
-dotnet ef database update --startup-project ../ToDoList.Presentation
-```
-
-### 4. Run the application
-
-Return to the solution root and run the Presentation project
-
-```powershell
-cd ../ToDoList.Presentation
-dotnet run
-```
+Please open the solution in Visual Studio and run it. NuGet packages will be install automatically (if they were not). Project already contain migration.
 
 ### Project Structure
 **Domain** — Entities and domain interfaces

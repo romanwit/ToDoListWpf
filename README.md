@@ -59,6 +59,10 @@ GUI have a filter just by isCompleted property and export to Pdf with using of Q
 
 Title should be not null, so there is a small validation in TaskEdit window.
 
+IsCompleted is saved as boolean, and Priority as enum without creating second table in DB for it (because it's just a demo).
+
+There is second project in the solution, just for tests. There are only 2 unit tests, also because it's a demo.
+
 ### License
 This project is open-source and free to use and modify.
 

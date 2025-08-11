@@ -135,7 +135,7 @@ namespace ToDoList.Presentation.ViewModels
 
             if (saveFileDialog.ShowDialog() == true)
             {
-                var dtos = Tasks.Select(t => new TaskDto
+                var dtos = FilteredTasks.Select(t => new TaskDto
                 {
                     Id = t.Id,
                     Title = t.Title,

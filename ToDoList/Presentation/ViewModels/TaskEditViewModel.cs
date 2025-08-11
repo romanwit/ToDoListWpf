@@ -4,8 +4,6 @@ using System.Windows;
 using ToDoList.Application.DTOs;
 using ToDoList.Domain.Enums;
 using ToDoList.Presentation.Models;
-using CommunityToolkit.Mvvm.ComponentModel;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 
 namespace ToDoList.Presentation.ViewModels
@@ -22,8 +20,13 @@ namespace ToDoList.Presentation.ViewModels
                 if (SetProperty(ref _title, value))
                 {
                     OnPropertyChanged(nameof(HasErrors));
+                    OkCommand.NotifyCanExecuteChanged();
                 }
             }
+        }
+        private bool CanExecuteOk()
+        {
+            return !HasErrors; 
         }
         public string? Description { get; set; }
         public DateTime? DueDate { get; set; }
@@ -31,7 +34,7 @@ namespace ToDoList.Presentation.ViewModels
         public bool IsCompleted { get; set; }
         public Priority Priority { get; set; } = Priority.Normal;
         public List<Priority> Priorities { get; } = Enum.GetValues(typeof(Priority)).Cast<Priority>().ToList();
-        public ICommand OkCommand { get; }
+        public RelayCommand OkCommand { get; }
         public ICommand CancelCommand { get; }
         public string Error => null;
         public string this[string columnName]
@@ -51,7 +54,7 @@ namespace ToDoList.Presentation.ViewModels
 
         public TaskEditViewModel()
         {
-            OkCommand = new RelayCommand(() => CloseDialog(true));
+            OkCommand = new RelayCommand(() => CloseDialog(true), CanExecuteOk);
             CancelCommand = new RelayCommand(() => CloseDialog(false));
         }
 
@@ -88,6 +91,7 @@ namespace ToDoList.Presentation.ViewModels
                 window.Close();
             }
         }
+
 
     }
 

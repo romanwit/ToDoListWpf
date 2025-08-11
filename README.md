@@ -27,8 +27,8 @@ ToDoList is a simple task management application featuring task creation, editin
 ### 1. Clone the repository
 
 ```powershell
-git clone https://github.com/romanwit/ToDoList.git
-cd ToDoList
+git clone https://github.com/romanwit/ToDoListWpf.git
+cd ToDoListWpf
 ```
 
 ### 2. Install NuGet packages

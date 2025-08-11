@@ -48,10 +48,16 @@ Please open the solution in Visual Studio and run it. NuGet packages will be ins
 ### Architecture solutions
 
 We use here clean architecture with separation of layers of abstraction. To use concrete implementations, we use dependency injection and automapper.
+
 Saving to filesystem (JSON or CSV) can cause a problems with performance in real life projects, so some relational DB should be used. So, data is stored in SQLite, it is most obvious for such project.
+
 We use Guid as id of task; if we shall know in advance, that we shall use RDBMS, we should use an autoincrement at DB (Guid takes too much space). But in the domain layer we do not know about concrete implementation. It can be saving to filesystem, or Redis.
+
 For GUI we use MVVM pattern, that is standard for WPF. There are just 2 sets of views and viewmodels: MainWindow to show all tasks and TaskEdit to Add/Edit a task. Connection between XAML and viewmodels is made by RelayCommands, that is also standard for WPF.
+
 GUI have a filter just by isCompleted property and export to Pdf with using of QuestPdf library.
+
+Title should be not null, so there is a small validation in TaskEdit window.
 
 ### License
 This project is open-source and free to use and modify.
